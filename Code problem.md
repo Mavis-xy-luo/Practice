@@ -40,3 +40,15 @@ lst1.extend(lst3 * 2)   # [0, 1, 2, 4, 5, 4, 5]
 lst1 += lst3 * 2  # [0, 1, 2, 4, 5, 4, 5]
 
 ```
+
+-----------
+
+list comprehension
+x for x in a if x in b (返回的是list)
+set comprehension
+set()函数的时间复杂度
+set comprehension的时间
+set comprehension
+
+
+
