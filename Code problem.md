@@ -11,3 +11,32 @@ not > and > or
 2. (not A) or B
 
 not的优先级>or的优先级，故2对
+
+
+#### dict
+
+1. dictA遍历得到的是什么？
+   for i in dictA 遍历的是key
+   
+2. dict的妙用
+   不需要判断这个元素i在不在dict里，直接计入dict计数
+   dictA.get(i, 0) + 1
+   
+#### list
+list.append(A) ---- 把A作为一个元素append进来
+list.extend(A) ---- 把A里的元素加进来
+
+```python
+lst1 = [0, 1, 2]
+lst2 = [3]
+lst3 = [4, 5]
+
+lst1.append(lst2 * 2) / lst1.append([3] * 2)   # [0, 1, 2, [3], [3]]
+lst1.extend(lst2 * 2) / lst1.extend([3] * 2)   # [0, 1, 2, 3, 3]
+lst1 += lst2 * 2 / lst1 += [3] * 2   # [0, 1, 2, 3, 3]
+
+lst1.append(lst3 * 2)  # [0, 1, 2, [4, 5], [4, 5]]
+lst1.extend(lst3 * 2)   # [0, 1, 2, 4, 5, 4, 5]
+lst1 += lst3 * 2  # [0, 1, 2, 4, 5, 4, 5]
+
+```
