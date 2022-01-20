@@ -11,4 +11,5 @@
 二、第二种设计思路：first指向真的first元素前面一个位置，last指向真的last元素后面一个位置（即数据集空间比其容量空间多一个位置n=k+1）
 
 这两者思路在出现first/last - 1得到新的first/last位置时需要考虑为负数的情况：即-1；
+
 —— 通过这种方式可以确保得到的位置会永远在范围内（first/last - 1 + len(items)) % len(items)
