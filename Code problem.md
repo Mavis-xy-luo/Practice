@@ -13,6 +13,16 @@ not > and > or
 not的优先级>or的优先级，故2对
 
 
+#### or 和 and返值问题  
+
+```python
+print( 3 or 1)  
+>> 3  
+print( 3 and 1)  
+>> 1
+```
+
+--------
 #### dict
 
 1. dictA遍历得到的是什么？
