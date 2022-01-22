@@ -14,12 +14,33 @@ not的优先级>or的优先级，故2对
 
 
 #### or 和 and返值问题  
+Flse: 所有空字符串，包括0
+True: 所有非空字符串，非0数字
+<br>
+
+**and**  
+返回第一个F的值；如果都是T，返回右边表达式的值
+<br>
+
+**or**  
+返回第一个T的值；如果都是F，返回右边表达式的值
+
+[参考资料](https://blog.csdn.net/weixin_39875760/article/details/109931256?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.pc_relevant_default&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
 
 ```python
-print( 3 or 1)  
->> 3  
-print( 3 and 1)  
->> 1
+print( 2 and 0 and 5)  
+>> 0
+print(2 and 2 and 5)
+>> 5
+print(None and 0)
+>> 0
+
+print(3 or 0 or None)  
+>> 3
+print(0 or 5 or None)
+>> 5
+print(None or 0)
+>> None
 ```
 
 --------
