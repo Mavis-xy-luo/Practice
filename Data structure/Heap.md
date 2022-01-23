@@ -17,3 +17,20 @@ Ad: 1. save space.
 2. 右孩子 index = 2x + 2
 3. 父节点 index = (x - 1) // 2
 ```
+
+**用Array实现Heap**
+1. push()
+2. pop()
+3. heapify(list)
+
+sift up & sift down
+
+```python
+
+class Heap(object):
+    def __init__(self):
+        self.lst = []
+        
+    
+
+```
