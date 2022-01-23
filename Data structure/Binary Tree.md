@@ -366,7 +366,40 @@ def isBSTPostOrderHelper(root):
 2. Insert
 3. Delete
 
-**Range Sum of BST**
+**Range Sum of BST**  
+Given a node in binary search tree, return the sum of values of all nodes with value between L and R(inclusive).
+
+```python
+# for general binary tree
+def rangeSum(root, L, R):
+   res = 0
+   if not root:
+      return 0
+   
+   if root.val >= L and root,val <= R:
+      res += root.val
+   res += rangeSum(root.left, L, R)
+   res += rangeSum(root.right, L, R)
+   
+   return res
+
+# for BST
+def rangeSumBST(root, L, R):
+   res = 0
+   if not root:
+      return res
+   
+   if root.val < L:
+      return rangeSumBST(root.right, L, R)
+   elif root.val > R:
+      return rangeSumBST(root.left, L, R)
+   else:
+      return root.val + rangeSumBST(root.left, L, root.val) + rangeSumBST(root.right, root.val, R)
+
+```
+
+
+
 
 <br>
 
