@@ -79,7 +79,16 @@ x for x in a if x in b (返回的是list)
 set comprehension
 set()函数的时间复杂度
 set comprehension的时间
-set comprehension
+set comprehension  
 
+Red-Black Tree
+AVL Tree
+Splay Tree
+
+
+### Tail Recursion
+A tail recursion is a recursive function where the function calls itself at the end("tail") of the function in which no computation is done after the return of the recursive call.  
+
+**Tail Recursion can always be translated to iterative calls.**
 
 
