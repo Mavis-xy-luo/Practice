@@ -92,3 +92,13 @@ A tail recursion is a recursive function where the function calls itself at the 
 **Tail Recursion can always be translated to iterative calls.**
 
 
+### Deque
+Deque(list) 会把list转成deque，且按原来的元素顺序，保存
+```python
+lst = [0,1,2,3]
+dq = deque(lst)
+print(dq.popleft())
+
+>> 0
+```
+
