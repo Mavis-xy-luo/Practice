@@ -190,3 +190,60 @@ merge(arrays)
 
 ```
 
+
+```python
+
+import heapq
+
+def smallestRange(arrays):
+    
+
+```
+
+#### Q3. Smallest Range
+Given k sorted integer arrays, pick k elements (one element from each of sorted arrays), what is the smallest range.  
+We define the range [a,b] is smaller than range [c,d] if b-a < d-c or a < c if b-a == d-c.  
+Examples:  
+[[ 1, 4, 6 ],  
+ [ 2, 5 ],  
+ [8, 10, 15]]  
+pick one element from each of 3 arrays, the smallest range is {5, 8} (pick 6 from the first array, pick 5 from the second array and pick 8 from the third array).  
+
+**解题思想**  
+
+res = [low, up]  
+heap(a1, b1, c1)  
+
+新push进heap的x只有2种可能：
+1. \> 现存的上界限  
+&nbsp;此时x无法帮助改进res的结果，因为只会扩大范围；故作为新的max，看和heap里最小值 <em>(下一轮pop出的元素)</em> 组合是否是更small的range  
+2. < 现存的上界限  
+&nbsp;此时x所在array一定和上界限up所在array不是同一个array（因为是有序array，故新push进heap的element一定比已经pop出heap的同array的element数值要大）；  
+&nbsp;所以x一定比下界low要大，则可以帮助使得现存range变小
+
+```python
+
+def smallestRange(arrays):
+    heap = []
+    k = len(arrays)
+    
+    max_val = -float('inf')
+    for i in range(len(arrays)):
+        if len(arrays[i]):
+            heap.append((arrays[i][0], i, 0))
+            max_val = max(arrays[i][0], max_val)
+    heapq.heapify(heap)
+    
+    res = [-float('inf'), float('inf')]
+    while len(heap) == k:  # 因为出去的是第x个array的值，进来的是第x个array下一大的值，如果没有了，表示第x个array里用来参与决策range的元素用完了
+                           # 故这里的k帮助确保range是由k个array里的元素共同确定的
+        min_val, array_idx, ele_idx = heapq.heappop(heap)
+        
+        if max_val - min_val < res[1] - res[0]:
+            res = [min_val, max_val]
+        if ele_idx + 1 < len(arrays[array_idx]):
+            max_val = max(max_val, arrays[array_idx][ele_idx + 1])
+            heapq.heappush(heap, (arrays[array_idx][ele_idx + 1], array_idx, ele_idx + 1))
+    return res
+
+```
