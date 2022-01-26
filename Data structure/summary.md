@@ -4,9 +4,12 @@ from：https://www.1point3acres.com/bbs/thread-840864-1-1.html
 
 
 ## 一、数组和字符串相关 （array & string）
-1. 括号相关题（另外见【栈】）
-   921. Minimum Add to Make Parentheses Valid， 1249. Minimum Remove to Make Valid Parentheses
+1. 括号相关题（另外见【栈】）✅
+   - [ ] 921. Minimum Add to Make Parentheses Valid， 
+   - [ ] 1249. Minimum Remove to Make Valid Parentheses
+
 2. 排列（组合） Permutation
+
 3. 区间题 Intervals [left, right, val]
    - [ ] 3.1 按左右端点排序的思想 
         - [ ] 252. Meeting Rooms
@@ -20,6 +23,7 @@ from：https://www.1point3acres.com/bbs/thread-840864-1-1.html
        - [ ] 1235 Maximum Profit in Job Scheduling， 
        - [ ] 2054 Two Best Non-Overlapping Events
    - [ ] 3.5 区间更新 1094. Car Pooling
+
 4. 常规双指针
    - [ ] 15 3Sum，
    - [ ] 75 Sort Colors（Dutch national flag problem 经典题
@@ -45,6 +49,7 @@ from：https://www.1point3acres.com/bbs/thread-840864-1-1.html
    Rolling hash （Rabin-Karp） 
       - [ ] 1062. Longest Repeating Substring， 
       - [ ] 1044. Longest Duplicate Substring
+
 8. 排列组合
    - [ ] 46 Permutations, 
    - [ ] 31. Next Permutation
@@ -67,6 +72,7 @@ from：https://www.1point3acres.com/bbs/thread-840864-1-1.html
 11. Bitmask 用bit来表示状态
    - [ ] 847. Shortest Path Visiting All Nodes
 
+
 ## 二、搜索和查询 Search and Query
 1. hash (python: dictionary, set): O(1)查找，记录unique element的frequency
 2. binary search  左开右闭模板
@@ -76,16 +82,17 @@ from：https://www.1point3acres.com/bbs/thread-840864-1-1.html
       - [ ] 162 Find Peak Element
    2. 解的范围是一个区间可以二分搜索
       - [ ] Binary search + greedy: 
-        - [ ] 1231 Divide Chocolate, 
-        - [ ] 1011 Capacity To Ship Packages Within D Days, 
-        - [ ] 410. Split Array Largest Sum
+      - [ ] 1231 Divide Chocolate, 
+      - [ ] 1011 Capacity To Ship Packages Within D Days, 
+      - [ ] 410. Split Array Largest Sum
       - [ ] 378 Kth Smallest Element in a Sorted Matrix
    3. 经典题 Search a 2D Matrix 系列
    4. 字典树 Trie 模板 （单词相关的查找）： 
       - [ ] 642. Design Search Autocomplete System， 
       - [ ] 472. Concatenated Words， 
       - [ ] 212. Word Search II
-   5. Range Query (Segment Tree 模板)  307. Range Sum Query - Mutable
+   5. Range Query (Segment Tree 模板)  
+      - [ ] 307. Range Sum Query - Mutable
 
 
 ## 三、排序 Sort
@@ -159,55 +166,64 @@ from：https://www.1point3acres.com/bbs/thread-840864-1-1.html
 
 
 
-## 1. 图 Graph
-图的遍历  BFS ,  DFS ,  准备模板
-图--三类
-常规的node和edge的图, 建adj matrix然后遍历  (690. Employee Importance)
-把矩阵看成图, 4周neighbor相连 （0-1 Islands系列, 79. Word Search, 417. Pacific Atlantic Water Flow）
-把data(state)看成node, 把操作operation看成edge (127. Word Ladder, 1345. Jump Game IV) , 这种思路很多时候就变成了动态规划题
-拓扑排序（topological sort) 准备模板. From 1point 3acres bbs
-决定nodes先后顺序(关系) （210. Course Schedule II， 269. Alien Dictionary）
-判断有向图是否有cycle (207. Course Schedule)
-判断无向图是否有cycle (1192. Critical Connections in a Network)
-图二分染色 (785. Is Graph Bipartite?)
-最短（最长）路径
-经典BFS题 994. Rotting Oranges, 909. Snakes and Ladders, 1091. Shortest Path in Binary Matrix, 1293. Shortest Path in a Grid with Obstacles Elimination
-Dijkstra （用heap 写，准备模板） （1631. Path With Minimum Effort， 1066. Campus Bikes II）
-并查集Union Find  准备模板
-用于快速合并图的不同components （305. Number of Islands II）
-用于快速判断两个nodes是不是连通
-回溯法 Backtracking 本质就是想象成图，然后递归的DFS（有时可以剪枝）  526. Beautiful Arrangement, 22. Generate Parentheses
-binarysearch+BFS： 用binary search 查找答案，然后在限制条件下做BFS。类似的用binary search 查找答案的思路见【7. 搜索和查询 中的binary search部分】
-1102 Path With Maximum Minimum Value
-778  Swim in Rising Water
-1631 Path With Minimum Effort
+## 七、图 Graph
+1. 图的遍历  BFS ,  DFS ,  准备模板
+2. 图--三类
+   - [ ] 2.1 常规的node和edge的图, 建adj matrix然后遍历  (690. Employee Importance)
+   - [ ] 2.2 把矩阵看成图, 4周neighbor相连 （0-1 Islands系列, 79. Word Search, 417. Pacific Atlantic Water Flow）
+   - [ ] 2.3 把data(state)看成node, 把操作operation看成edge (127. Word Ladder, 1345. Jump Game IV) , 这种思路很多时候就变成了动态规划题
+3. 拓扑排序（topological sort) 准备模板.
+   - [ ] 决定nodes先后顺序(关系) （210. Course Schedule II， 269. Alien Dictionary）
+4. 判断有向图是否有cycle (207. Course Schedule)
+5. 判断无向图是否有cycle (1192. Critical Connections in a Network)
+6. 图二分染色 (785. Is Graph Bipartite?)
+7. 最短（最长）路径
+   - [ ] 7.1经典BFS题 
+      - [ ] 994. Rotting Oranges, 
+      - [ ] 909. Snakes and Ladders, 
+      - [ ] 1091. Shortest Path in Binary Matrix, 
+      - [ ] 1293. Shortest Path in a Grid with Obstacles Elimination
+   - [ ] 7.2 Dijkstra （用heap 写，准备模板） 
+      - [ ] 1631. Path With Minimum Effort， 
+      - [ ] 1066. Campus Bikes II
+8. 并查集Union Find  准备模板
+   - [ ] 用于快速合并图的不同components （305. Number of Islands II）
+   - [ ] 用于快速判断两个nodes是不是连通
+9. 回溯法 Backtracking 本质就是想象成图，然后递归的DFS（有时可以剪枝）
+   - [ ] 526. Beautiful Arrangement, 
+   - [ ] 22. Generate Parentheses
+10. binarysearch+BFS： 用binary search 查找答案，然后在限制条件下做BFS。类似的用binary search 查找答案的思路见【7. 搜索和查询 中的binary search部分】
+   - [ ] 1102 Path With Maximum Minimum Value
+   - [ ] 778  Swim in Rising Water
+   - [ ] 1631 Path With Minimum Effort
 
 
 
-3. 动态规划 Dynamic Programming
+## 八、动态规划 Dynamic Programming
 有状态转化方程，可以把大问题转化为几个小问题，或者可以按某种顺序依次解决问题。（用图的思想，data是node, operation是edge）
 常见思路
-用dp代表关于arr[0:i]的subproblem  (只到i 或者 从i开始的subproblem）
-用dp[j] 代表关于arr[i:j+1]的subproblem （或者是关于两个数组的 arr[0:i] 和 arr2[0:j]的subproblem, 或者关于两个变量i,j的subproblem）
-经典DP题目
-LIS: 300. Longest Increasing Subsequence O(nlogn)  (2D version: 354. Russian Doll Envelopes)
-LCS: 1143. Longest Common Subsequence
-Longest Substring Without Repeating Characters
-字符串操作： 72. Edit Distance， 44. Wildcard Matching, 10. Regular Expression Matching
-Palindrome problems: 647. Palindromic Substrings, 5. Longest Palindromic Substring
-Prefix sum/max/min 相关： 42. Trapping Rain Water, 1423. Maximum Points You Can Obtain from Cards， Range Sum Query - Immutable, 304. Range Sum Query 2D - Immutable
-Word Break 系列
-硬币零钱系列 Coin Change
-买股票系列 Best Time to Buy and Sell Stock
-跳跃游戏系列 Jump games
-抢劫系列 House Robber
-石头游戏系列（Alice & Bob) Stone Game
-Unique Paths 系列
-688 Knight Probability in Chessboard
-摘樱桃 Pick cherry
-174  Dungeon Game
-1277 Count Square Submatrices with All Ones
-加油站问题 871. Minimum Number of Refueling Stops
+1. 用dp代表关于arr[0:i]的subproblem  (只到i 或者 从i开始的subproblem）
+2. 用dp[j] 代表关于arr[i:j+1]的subproblem （或者是关于两个数组的 arr[0:i] 和 arr2[0:j]的subproblem, 或者关于两个变量i,j的subproblem）
+
+### 经典DP题目
+- [ ] LIS: 300. Longest Increasing Subsequence O(nlogn)  (2D version: 354. Russian Doll Envelopes)
+- [ ] LCS: 1143. Longest Common Subsequence
+- [ ] Longest Substring Without Repeating Characters
+- [ ] 字符串操作： 72. Edit Distance， 44. Wildcard Matching, 10. Regular Expression Matching
+- [ ] Palindrome problems: 647. Palindromic Substrings, 5. Longest Palindromic Substring
+- [ ] Prefix sum/max/min 相关： 42. Trapping Rain Water, 1423. Maximum Points You Can Obtain from Cards， Range Sum Query - Immutable, 304. Range Sum Query 2D - Immutable
+- [ ] Word Break 系列
+- [ ] 硬币零钱系列 Coin Change
+- [ ] 买股票系列 Best Time to Buy and Sell Stock
+- [ ] 跳跃游戏系列 Jump games
+- [ ] 抢劫系列 House Robber
+- [ ] 石头游戏系列（Alice & Bob) Stone Game
+- [ ] Unique Paths 系列
+- [ ] 688 Knight Probability in Chessboard
+- [ ] 摘樱桃 Pick cherry
+- [ ] 174  Dungeon Game
+- [ ] 1277 Count Square Submatrices with All Ones
+- [ ] 加油站问题 871. Minimum Number of Refueling Stops
 
 
 
