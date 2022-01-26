@@ -8,47 +8,156 @@ from：https://www.1point3acres.com/bbs/thread-840864-1-1.html
    921. Minimum Add to Make Parentheses Valid， 1249. Minimum Remove to Make Valid Parentheses
 2. 排列（组合） Permutation
 3. 区间题 Intervals [left, right, val]
-   - [ ] 1. 按左右端点排序的思想 
+   - [ ] 3.1 按左右端点排序的思想 
         - [ ] 252. Meeting Rooms
-   - [ ] 2. 插入，合并，删除区间： 
+   - [ ] 3.2 插入，合并，删除区间： 
        - [ ] 56. Merge Intervals,
        - [ ] 57. Insert Interval,
        - [ ] 1272. Remove Interval,
        - [ ] 435. Non-overlapping Intervals
-    4. 安排会议/任务  253. Meeting Rooms II， 1235 Maximum Profit in Job Scheduling， 2054 Two Best Non-Overlapping Events
-区间更新 1094. Car Pooling
-常规双指针
-15 3Sum，
-75 Sort Colors（Dutch national flag problem 经典题
-1229 Meeting Scheduler，
-680 Valid Palindrome II，
-408 Valid Word Abbreviation. From 1point 3acres bbs
-滑动窗口 Sliding window 模板
-3 Longest Substring Without Repeating Characters
-76 Minimum Window Substring
-1004 Max Consecutive Ones III
-209  Minimum Size Subarray Sum
-1438 Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
-Subsequence-baidu 1point3acres
-Greedy drop idea: 392 Is Subsequence， 792 Number of Matching Subsequences
-经典题 727. Minimum Window Subsequence
-940 Distinct Subsequences II
-Subarray、substring （连续的）
-Rolling hash （Rabin-Karp） 1062. Longest Repeating Substring， 1044. Longest Duplicate Substring
-排列组合
-46 Permutations, 31. Next Permutation
-77 Combinations
-Subset
-78 Subsets
-368 Largest Divisible Subset
-数据流相关的问题
-top k 问题 --> heap; buck sort -->  distributed system:
-1146 Snapshot Array  (打version tag + binary search）
-359 Logger Rate Limiter
-LRU, LFU
-Median 295. Find Median from Data Stream
-Iterator  284. Peeking Iterator, 900. RLE Iterator
-Bitmask 用bit来表示状态 847. Shortest Path Visiting All Nodes
+   - [ ] 3.4 安排会议/任务  
+       - [ ] 253. Meeting Rooms II， 
+       - [ ] 1235 Maximum Profit in Job Scheduling， 
+       - [ ] 2054 Two Best Non-Overlapping Events
+   - [ ] 3.5 区间更新 1094. Car Pooling
+4. 常规双指针
+   - [ ] 15 3Sum，
+   - [ ] 75 Sort Colors（Dutch national flag problem 经典题
+   - [ ] 1229 Meeting Scheduler，
+   - [ ] 680 Valid Palindrome II，
+   - [ ] 408 Valid Word Abbreviation. From 1point 3acres bbs
+
+5. 滑动窗口 Sliding window 模板
+   - [ ] 3 Longest Substring Without Repeating Characters
+   - [ ] 76 Minimum Window Substring
+   - [ ] 1004 Max Consecutive Ones III
+   - [ ] 209  Minimum Size Subarray Sum
+   - [ ] 1438 Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+
+6. Subsequence-baidu 1point3acres
+   - [ ] 6.1 Greedy drop idea: 
+       - [ ] 392 Is Subsequence
+       - [ ] 792 Number of Matching Subsequences
+   - [ ] 6.2 经典题 727. Minimum Window Subsequence
+   - [ ] 6.4 940 Distinct Subsequences II
+
+7. Subarray、substring （连续的）
+   Rolling hash （Rabin-Karp） 
+      - [ ] 1062. Longest Repeating Substring， 
+      - [ ] 1044. Longest Duplicate Substring
+8. 排列组合
+   - [ ] 46 Permutations, 
+   - [ ] 31. Next Permutation
+   - [ ] 77 Combinations
+
+9. Subset
+   - [ ] 78 Subsets
+   - [ ] 368 Largest Divisible Subset
+
+10. 数据流相关的问题
+   - [ ] 10.1 top k 问题 --> heap; buck sort -->  distributed system:
+   - [ ] 10.2 1146 Snapshot Array  (打version tag + binary search）
+   - [ ] 10.3 359 Logger Rate Limiter
+   - [ ] 10.4 LRU, LFU
+   - [ ] 10.5 Median 295. Find Median from Data Stream
+   - [ ] 10.6 Iterator 
+      - [ ] 284. Peeking Iterator, 
+      - [ ] 900. RLE Iterator
+
+11. Bitmask 用bit来表示状态
+   - [ ] 847. Shortest Path Visiting All Nodes
+
+## 二、搜索和查询 Search and Query
+1. hash (python: dictionary, set): O(1)查找，记录unique element的frequency
+2. binary search  左开右闭模板
+   1. data是有顺序的，每次可以缩小搜索范围。 经典题：
+      - [ ] 33 Search in Rotated Sorted Array，
+      - [ ] 153 Find Minimum in Rotated Sorted Array，
+      - [ ] 162 Find Peak Element
+   2. 解的范围是一个区间可以二分搜索
+      - [ ] Binary search + greedy: 
+        - [ ] 1231 Divide Chocolate, 
+        - [ ] 1011 Capacity To Ship Packages Within D Days, 
+        - [ ] 410. Split Array Largest Sum
+      - [ ] 378 Kth Smallest Element in a Sorted Matrix
+   3. 经典题 Search a 2D Matrix 系列
+   4. 字典树 Trie 模板 （单词相关的查找）： 
+      - [ ] 642. Design Search Autocomplete System， 
+      - [ ] 472. Concatenated Words， 
+      - [ ] 212. Word Search II
+   5. Range Query (Segment Tree 模板)  307. Range Sum Query - Mutable
+
+
+## 三、排序 Sort
+1. Merge sort
+   - [ ] 非常规高频题 315 Count of Smaller Numbers After Self  --> (google题： 一堆点, 对每个点(x,y)数【严格大 (x,y)<(u,v)】的点的个数. 思路：先排序，x增序，y减序，然后把y单独拿出来看，对每个点数右边有多少大的元素，变成问题315 with bigger numbers after self)
+2. Quick Sort --> QuickSelect O(n) time on average) 973. K Closest Points to Origin
+3. Bucket Sort O(n) 通常是整体数据量可能很大，但是unique元素有限
+4. Cycle Sort O(n) 通常是用于把0到n-1在array中排序 （不断交换的想法）
+5. Python built-in sort
+   - [ ] OrderedDict (linked list + hash) --> 自己实现： 用 hashtable 存double linkedlist 的 node
+   - [ ] sorted containers (sorted list, sorted dict, sorted set)
+
+
+## 四、链表 LinkedList
+1. Fast and Slow pointer  (detect cycle, get middle,  get kth element)
+   - [ ] 141 Linked List Cycle
+   - [ ] 19 Remove Nth Node From End of List
+2. Reverse Linked List (trick: dummy head)  206 Reverse Linked List, 25 Reverse Nodes in k-Group
+3. LRU cache
+4. Deep copy  (138 Copy List with Random Pointer)
+5. Merge LinkedList  (2. Add Two Numbers)
+
+
+## 五、堆 Heap, 栈 Stack, 队 Queue
+### 队 Queue, Deque
+1. BFS related
+2. 239 Sliding Window Maximum  ---> 2D sliding window maximum ( 转化成两次1D的问题）
+3. Moving Average from Data Stream
+
+### 栈 Stack
+1. 常规题
+   - [ ] 946 Validate Stack Sequences
+   - [ ] Asteroid Collision
+2. 括号题
+   - [ ] Valid Parentheses, Remove Invalid Parentheses
+   - [ ] Basic Calculator 系列
+   - [ ] Nested List Iterator 系列
+   - [ ] Decode String， Number of Atoms
+3. 单调栈
+   - [ ] Next Greater Element 系列
+   - [ ] 402 Remove K Digits
+   - [ ] 853 Car Fleet
+   - [ ] 739 Daily Temperatures
+
+### 堆 Heap
+1. Top k： 215. Kth Largest Element in an Array， 347. Top K Frequent Elements
+2. 中位数： double heap 295. Find Median from Data Stream
+   - [ ] 另外一道经典中位数题目 4. Median of Two Sorted Arrays
+3. 会议室问题 253. Meeting Rooms II
+4. CPU分配 模板: LC 1834. Single-Threaded CPU, LC 1882. Process Tasks Using Servers
+
+
+## 六、树 Tree
+1. 树的遍历
+   - [ ] DFS (binary tree: in-order, pre-order,  post-order)
+   - [ ] BFS: 
+      - [ ] 314. Binary Tree Vertical Order Traversal， 
+      - [ ] 199. Binary Tree Right Side View
+2. 递归大法 (大部分树的题都能递归，大的问题(root)，等于先解决几个子问题（subtree), 然后合并）:
+   - [ ] 124 Binary Tree Maximum Path Sum，
+   - [ ] 366 Find Leaves of Binary Tree
+3. Lowest Common Ancestor系列
+4. Binary Search Tree 判断和快速查找元素 98. Validate Binary Search Tree
+5. 树的编码和解码
+   - [ ] 297 Serialize and Deserialize Binary Tree
+   - [ ] 428 Serialize and Deserialize N-ary Tree
+6. 把树变成图： 
+   - [ ] 863. All Nodes Distance K in Binary Tree
+
+
+
+
 
 ## 1. 图 Graph
 图的遍历  BFS ,  DFS ,  准备模板
@@ -73,21 +182,6 @@ binarysearch+BFS： 用binary search 查找答案，然后在限制条件下做B
 778  Swim in Rising Water
 1631 Path With Minimum Effort
 
-
-2. 树 Tree
-树的遍历
-DFS (binary tree: in-order, pre-order,  post-order)
-BFS: 314. Binary Tree Vertical Order Traversal， 199. Binary Tree Right Side View
-递归大法 (大部分树的题都能递归，大的问题(root)，等于先解决几个子问题（subtree), 然后合并）:
-124 Binary Tree Maximum Path Sum，
-366 Find Leaves of Binary Tree
-Lowest Common Ancestor系列
-Binary Search Tree 判断和快速查找元素 98. Validate Binary Search Tree
-树的编码和解码
-297 Serialize and Deserialize Binary Tree
-428 Serialize and Deserialize N-ary Tree
-把树变成图： 863. All Nodes Distance K in Binary Tree
-. check 1point3acres for more.
 
 
 3. 动态规划 Dynamic Programming
@@ -114,72 +208,6 @@ Unique Paths 系列
 174  Dungeon Game
 1277 Count Square Submatrices with All Ones
 加油站问题 871. Minimum Number of Refueling Stops
-
-
-4. 堆 Heap, 栈 Stack, 队 Queue
-栈 Stack
-常规题
-946 Validate Stack Sequences
-Asteroid Collision
-括号题
-Valid Parentheses, Remove Invalid Parentheses
-Basic Calculator 系列
-Nested List Iterator 系列
-Decode String， Number of Atoms
-单调栈
-Next Greater Element 系列
-402 Remove K Digits
-853 Car Fleet
-739 Daily Temperatures
-堆 Heap
-Top k： 215. Kth Largest Element in an Array， 347. Top K Frequent Elements
-中位数： double heap 295. Find Median from Data Stream
-另外一道经典中位数题目 4. Median of Two Sorted Arrays
-会议室问题 253. Meeting Rooms II
-CPU分配 模板: LC 1834. Single-Threaded CPU, LC 1882. Process Tasks Using Servers
-队 Queue, Deque
-BFS related
-239 Sliding Window Maximum  ---> 2D sliding window maximum ( 转化成两次1D的问题）
-Moving Average from Data Stream
-
-
-5. 链表 LinkedList
-Fast and Slow pointer  (detect cycle, get middle,  get kth element)
-141 Linked List Cycle
-19 Remove Nth Node From End of List
-Reverse Linked List (trick: dummy head)  206 Reverse Linked List, 25 Reverse Nodes in k-Group
-LRU cache
-Deep copy  (138 Copy List with Random Pointer)
-Merge LinkedList  (2. Add Two Numbers)
-
-6. 排序 Sort
-Merge sort
-非常规高频题 315 Count of Smaller Numbers After Self  --> (google题： 一堆点, 对每个点(x,y)数【严格大 (x,y)<(u,v)】的点的个数. 思路：先排序，x增序，y减序，然后把y单独拿出来看，对每个点数右边有多少大的元素，变成问题315 with bigger numbers after self)
-Quick Sort --> QuickSelect O(n) time on average) 973. K Closest Points to Origin
-Bucket Sort O(n) 通常是整体数据量可能很大，但是unique元素有限
-Cycle Sort O(n) 通常是用于把0到n-1在array中排序 （不断交换的想法）
-Python built-in sort
-OrderedDict (linked list + hash) --> 自己实现： 用 hashtable 存double linkedlist 的 node
-sorted containers (sorted list, sorted dict, sorted set)
-
-
-7. 搜索和查询 Search and Query
-hash (python: dictionary, set):
-O(1)查找，
-记录unique element的frequency
-binary search  左开右闭模板
-data是有顺序的，每次可以缩小搜索范围。 经典题：
-33 Search in Rotated Sorted Array，
-153 Find Minimum in Rotated Sorted Array，
-162 Find Peak Element
-解的范围是一个区间可以二分搜索
-Binary search + greedy: 1231 Divide Chocolate, 1011 Capacity To Ship Packages Within D Days, 410. Split Array Largest Sum
-378 Kth Smallest Element in a Sorted Matrix
--baidu 1point3acres
-经典题 Search a 2D Matrix 系列
-字典树 Trie 模板 （单词相关的查找）： 642. Design Search Autocomplete System， 472. Concatenated Words， 212. Word Search II
-Range Query (Segment Tree 模板)  307. Range Sum Query - Mutable
-
 
 
 
