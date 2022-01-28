@@ -102,3 +102,22 @@ print(dq.popleft())
 >> 0
 ```
 
+
+### defaultdict(list)
+defaultdict(list)会构造一个value默认为list的dict
+```python
+
+from collections import defaultdict
+res = defaultdict(list)
+data = [["p", 1], ["p", 2], ["p", 2], 
+        ["h", 1], ["h", 5]]
+
+for key, val in data:
+    res[key].append(val)
+
+print(res)
+
+
+>> defaultdict(<class 'list'>, {'p': [1, 2, 2], 'h': [1, 5]})
+```
+
