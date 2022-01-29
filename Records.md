@@ -20,4 +20,23 @@ def countBinarySubstrings(self, s):
 
 ```
 
-****
+**[394 Decode String](https://leetcode.com/problems/decode-string/)**
+```
+此题中括号是跟着走的，但不是字母（数字和括号是匹配的，单数字母和括号/数字和字母不匹配）所以操作如下：
+1）遇到num
+
+2）遇到char
+
+3）遇到[
+   此时nums append "["前的num，
+      strs append "["前的chars（因为接下来str要记录后面的字母，后面这些字母才是和"["前的num匹配的
+
+4）遇到]
+   此时表示一段连续的字母的结束，这串连续的字母需要和[前的数字想乘，
+   故：nums pop出来一个——count
+      count * []内的str，并和前面的str相接，即str pop() + count * str
+```
+
+```python
+
+```
