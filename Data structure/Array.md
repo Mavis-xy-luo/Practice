@@ -39,3 +39,20 @@ lst[idx] = val
 for val in lst:
 
 ```
+
+**Slicing**
+```python
+
+lst[start:end:step]   # [start, end) end cannot be arrive, 走step步取1次
+
+```
+
+**Otehr function**
+```python
+# get length of a list
+len(lst)
+
+# to string
+"".join(lst)   # 用引号内的元素把lst中每个元素连接起来
+```
+
