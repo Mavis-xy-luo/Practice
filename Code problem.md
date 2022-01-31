@@ -1,6 +1,29 @@
 # Code problems collection
 
-#### not和or/and的优先级问题
+### 格式化字符
+**(%_)%变量名**
+> %r: 不管什么都打印输出  
+> %s: 字符串  
+> %i / %d: 整数  
+> %f: 浮点数  
+
+```python
+
+name = "xyl"
+age = 18
+height = 1.60
+grade = 3.9
+print("my name is %s, I'm %i years old, my height is %f" %(name, age, height))
+print("grade is %r" %grade)
+
+>> my name is xyl, I'm 18 years old, my height is 1.600000
+>> grade is 3.9
+
+```
+
+
+
+### not和or/and的优先级问题
 not > and > or
 
 ```python
