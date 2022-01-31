@@ -13,10 +13,41 @@
 这两者思路在出现first/last - 1得到新的first/last位置时需要考虑为负数的情况：即-1；
 
 —— 通过这种方式可以确保得到的位置会永远在范围内（first/last - 1 + len(items)) % len(items)  
+<br>
 
 
-**常见操作**
+**常见操作**  
+Deque(list) 会把list转成deque，且按原来的元素顺序，保存
 ```python
+
+lst = [0,1,2,3]
+dq = deque(lst)
+
+print(dq.popleft())
+>> 0
+
+```
+
+因为dict中iterate访问的是key，所以deque(dict)只会把iterate key，然后把key装入deque
+```python
+
+my_dict = {"a": 1, "b":2, "c":3}
+q = deque(my_dict)
+
+print(q)
+>> deque(['a', 'b', 'c'])
+
+for i in my_dic:
+    print(i)
+    
+>> a
+   b
+   c
+```
+
+
+```python
+
 from collections import deque
 
 q = deque()
