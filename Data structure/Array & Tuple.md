@@ -80,6 +80,13 @@ print(times_1)
 # get length of a list
 len(lst)
 
+# sort
+new_lst = soreted(lst)   # not inplace, do not mutate lst, returns sorted lst
+lst.sort()   # in place sort, mutate lst
+
+# reverse
+lst.reverse()   # in place reverse lst
+
 # to string
 "".join(lst)   # 用引号内的元素把lst中每个元素连接起来
 ```
