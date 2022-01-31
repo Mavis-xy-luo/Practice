@@ -46,6 +46,8 @@ for val in lst:
 lst[start:end:step]   # [start, end) end cannot be arrive, 走step步取1次
 
 ```
+<br>
+
 **Packing & Unpacking**  
 > list 的packing很有意思，地址传递，所以改packing前的容器内的值，packing后的list 以及 之后unpacking后variable的所指之值也会被改变
 ```python
@@ -72,8 +74,28 @@ print(times_1)
    [1, 2, 5]
    
 ```
+<br>
 
+**append & extend**  
 
+list.append(A) ---- 把A作为一个元素append进来
+list.extend(A) ---- 把A里的元素加进来
+
+```python
+lst1 = [0, 1, 2]
+lst2 = [3]
+lst3 = [4, 5]
+
+lst1.append(lst2 * 2) / lst1.append([3] * 2)   # [0, 1, 2, [3], [3]]
+lst1.extend(lst2 * 2) / lst1.extend([3] * 2)   # [0, 1, 2, 3, 3]
+lst1 += lst2 * 2 / lst1 += [3] * 2   # [0, 1, 2, 3, 3]
+
+lst1.append(lst3 * 2)  # [0, 1, 2, [4, 5], [4, 5]]
+lst1.extend(lst3 * 2)   # [0, 1, 2, 4, 5, 4, 5]
+lst1 += lst3 * 2  # [0, 1, 2, 4, 5, 4, 5]
+
+```
+<br>
 
 **Otehr function**
 ```python
