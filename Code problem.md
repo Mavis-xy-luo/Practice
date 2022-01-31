@@ -42,8 +42,11 @@ print(0 or 5 or None)
 print(None or 0)
 >> None
 ```
+<br>
 
 --------
+<br>
+
 #### dict
 
 1. dictA遍历得到的是什么？
@@ -52,56 +55,10 @@ print(None or 0)
 2. dict的妙用
    不需要判断这个元素i在不在dict里，直接计入dict计数
    dictA.get(i, 0) + 1
-   
-#### list
-list.append(A) ---- 把A作为一个元素append进来
-list.extend(A) ---- 把A里的元素加进来
-
-```python
-lst1 = [0, 1, 2]
-lst2 = [3]
-lst3 = [4, 5]
-
-lst1.append(lst2 * 2) / lst1.append([3] * 2)   # [0, 1, 2, [3], [3]]
-lst1.extend(lst2 * 2) / lst1.extend([3] * 2)   # [0, 1, 2, 3, 3]
-lst1 += lst2 * 2 / lst1 += [3] * 2   # [0, 1, 2, 3, 3]
-
-lst1.append(lst3 * 2)  # [0, 1, 2, [4, 5], [4, 5]]
-lst1.extend(lst3 * 2)   # [0, 1, 2, 4, 5, 4, 5]
-lst1 += lst3 * 2  # [0, 1, 2, 4, 5, 4, 5]
-
-```
+<br>
 
 -----------
-
-list comprehension
-x for x in a if x in b (返回的是list)
-set comprehension
-set()函数的时间复杂度
-set comprehension的时间
-set comprehension  
-
-Red-Black Tree
-AVL Tree
-Splay Tree
-
-
-### Tail Recursion
-A tail recursion is a recursive function where the function calls itself at the end("tail") of the function in which no computation is done after the return of the recursive call.  
-
-**Tail Recursion can always be translated to iterative calls.**
-
-
-### Deque
-Deque(list) 会把list转成deque，且按原来的元素顺序，保存
-```python
-lst = [0,1,2,3]
-dq = deque(lst)
-print(dq.popleft())
-
->> 0
-```
-
+<br>
 
 ### defaultdict(list)
 defaultdict(list)会构造一个value默认为list的dict
@@ -120,4 +77,59 @@ print(res)
 
 >> defaultdict(<class 'list'>, {'p': [1, 2, 2], 'h': [1, 5]})
 ```
+<br>
+
+--------
+<br>
+
+#### list
+list.append(A) ---- 把A作为一个元素append进来
+list.extend(A) ---- 把A里的元素加进来
+
+```python
+lst1 = [0, 1, 2]
+lst2 = [3]
+lst3 = [4, 5]
+
+lst1.append(lst2 * 2) / lst1.append([3] * 2)   # [0, 1, 2, [3], [3]]
+lst1.extend(lst2 * 2) / lst1.extend([3] * 2)   # [0, 1, 2, 3, 3]
+lst1 += lst2 * 2 / lst1 += [3] * 2   # [0, 1, 2, 3, 3]
+
+lst1.append(lst3 * 2)  # [0, 1, 2, [4, 5], [4, 5]]
+lst1.extend(lst3 * 2)   # [0, 1, 2, 4, 5, 4, 5]
+lst1 += lst3 * 2  # [0, 1, 2, 4, 5, 4, 5]
+
+```
+<br>
+
+-----------
+<br>
+
+list comprehension  
+x for x in a if x in b (返回的是list)  
+```
+set comprehension
+set()函数的时间复杂度
+set comprehension的时间
+set comprehension 
+```
+<br>
+
+-----------
+<br>
+
+Red-Black Tree  
+AVL Tree  
+Splay Tree  
+
+<br>
+
+-----------
+<br>
+
+### Tail Recursion
+A tail recursion is a recursive function where the function calls itself at the end("tail") of the function in which no computation is done after the return of the recursive call.  
+<br>
+**Tail Recursion can always be translated to iterative calls.**
+
 
