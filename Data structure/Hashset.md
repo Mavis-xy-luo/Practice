@@ -1,14 +1,17 @@
 # Dict & Set
+<br>
 
-## Create new dict
-
+## Dict
+key是immutable的，所以key必须是immutable(hashable)的数据类型，所以list不行，tuple可以作为key。  
+<br>
+**Create new dict**
 ``` python
+my_dict = dict()
 my_dict = {}
 grades = {'Ana' : 'A', 'Bob' : 'C'}
 ```
 
-## look-up
-
+**look-up**
 ``` python
 grades['Ana']   # get 'A'
 grades['David']   # gives a KeyError
@@ -20,18 +23,17 @@ grades.get('Ana', 'N')   # get 'A'
 grades.get('David', 'N')   # get 'N'
 ```
 
-## Add
+**Add**
 ``` python
 grades['Cythia'] = 'B+'
 ```
-
-## Update
+**Update**
 The same syntax as "Add"
 ``` python
 grades['Ana'] = 'A+'
 ```
 
-## Delete
+**Delete**
 ``` pyhton
 # method 1
 del grades['Bob']
@@ -40,23 +42,21 @@ del grades['Bob']
 grades.pop('Bob')
 ```
 
-## Other uses
-### get keys and values
-**Get all keys as a list**
+**Other uses**  
+**get keys and values**
 ``` python
+# Get all keys as a list
 list(grades.keys())   
-```
-**Get all values as a list**
-``` python
+
+# Get all values as a list
 list(grades.values())
-```
 
-**Get all items**
-``` python
+# Get all items
 grades.items()   # returns dict_items([('Ana', 'A'), ('Bob', 'C')])
+
 ```
 
-**Use Cases**
+**Use Cases**  
 Most common word in a frequency dictionary
 ``` python
 def most_common_words(freqs):
@@ -67,23 +67,43 @@ def most_common_words(freqs):
 			words.append(word)
 	return (words, best)
 ```
-
-
+<br>
 
 ------ 
-## Create new set
+
+<br>
+
+## collections.defaultdict(list/int/str)
+create a dict with list/int/str类型的value
+```python
+import collections
+de_dict = collections.defaultdict(list)
+
+print(type(de_dict)
+>> <class 'collections.defaultdict'>
+
+```
+<br>
+
+------ 
+<br>
+
+## Set
+unordered collection of unique elements  
+<br>
+**Create new set**
 ``` python
 s = set()   # 区分tuple的创建，t = ()
 s = {'a', 'b', 'c'}
 ```
 
-## Add
+**Add**
 ``` python
 s.add('d')
 s.update({'e', 'f'})
 ```
 
-## Delete
+**Delete**
 ``` python
 s.remove('a')
 s.discard('i')
@@ -91,24 +111,24 @@ s.discard('i')
 s.clear()   # clear all elements from set
 ```
  
-## Other uses
-### Union two sets
+**Other uses**  
+**Union two sets**
 ``` python
 x.union(y)   # 会去除重复，因为set
 ```
 
-### Difference between two sets
+**Difference between two sets**
 ``` python
 x.difference(y)   # x中有，y没有的
 y.difference(x)   # y中有，x没有的
 ```
 
-### intersection
+**intersection**
 ``` python
 s.intersection(y)   # 2者都有的
 ```
 
-### Operators for sets
+**Operators for sets**
 ``` python
 if key in s
 if key not in s
