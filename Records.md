@@ -1,5 +1,24 @@
 # Prblems Recodes
 
+### 2 Sum
+**Basic 2 sum**  
+Determine if there exist two elements in a given array, the sum of which is the given target number.
+> 用一个set存看过的数据，每次走到新的数时，看和target的差是否在set里，O(n)
+```python
+def existSum(lst, target):
+    if not lst:
+        return False
+        
+    s = set()
+    for num in lst:
+        if target - num in s:
+            return True
+        s.add(num)
+    return False
+
+```
+****
+
 **[696](https://leetcode.com/problems/count-binary-substrings/)**
 ```python
 
