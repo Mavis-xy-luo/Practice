@@ -19,6 +19,13 @@ def existSum(lst, target):
 ```
 ****
 
+**[2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)** <br>
+用carry记录进位 <br>
+用val记录当前相加位应该得到的值(node1.val + node2.val + carry)
+
+**[43. Multiply Strings](https://leetcode.com/problems/multiply-strings/)** <br>
+怎么得到结果存在[i + j + 1]位？？？？？？
+
 **[696](https://leetcode.com/problems/count-binary-substrings/)**
 ```python
 
