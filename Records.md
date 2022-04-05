@@ -26,6 +26,15 @@ def existSum(lst, target):
 **[43. Multiply Strings](https://leetcode.com/problems/multiply-strings/)** <br>
 怎么得到结果存在[i + j + 1]位？？？？？？
 
+**[310. Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/)** <br>
+BFS从头（根）遍历 - 542
+BFS从叶子结点遍历 - 310
+
+
+**[743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)** <br>
+使用Dijkstra's算法，用到了heap，所以在heap里的节点在heap中的位置是变化动态的；故node什么时候判断是否在seen里，什么时候加入到seen里要留意。不是第一次遇见就要加入seen中
+
+
 **[696](https://leetcode.com/problems/count-binary-substrings/)**
 ```python
 
